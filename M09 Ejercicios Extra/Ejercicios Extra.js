@@ -93,7 +93,9 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
-   arrayOfStrings.sort(function( a.length,b.length))
+   var nuevoarray = []
+    nuevoarray = arrayOfStrings.sort(function(a,b){return a.length-b.length})
+    return nuevoarray
 }
 
 function buscoInterseccion(array1, array2) {
@@ -103,6 +105,13 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
+   arrayFinal = []
+   for (let i =0; i<array1.length; i++){
+      if (array2.includes(array1[i]) == true){
+         arrayFinal.push(array1[i])
+      }
+   }
+   return arrayFinal
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
